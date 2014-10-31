@@ -32,11 +32,13 @@
     (doseq [p photo-list]
       (.slickAdd ($ :#photo-previews)
                  (html [:div {:class (name category)}
-                        [:h1 [:img {:src   (str bucket p ".thumb")
+                        [:h1 {:class :preview-photo-container}
+                         [:img {:src   (str bucket p ".thumb")
                                     :class :photo}]]]))
       (.slickAdd ($ :#main-photo)
                  (html [:div {:class (name category)}
-                        [:h1 [:img {:data-lazy (str bucket p)
+                        [:h1 {:class :main-photo-container}
+                         [:img {:data-lazy (str bucket p)
                                     :class     :photo}]]])))))
 
 (go (let [result (<! (http/get (str bucket "photos.json") {:with-credentials? false}))

@@ -65,6 +65,9 @@
                      :margin-bottom "0"
                      :border-top "solid 2px white"}]
 
+  [:.main-photo-container    {:height "80%"}]
+  [:.preview-photo-container {:height "20%"}]
+
   [:.photo {:max-width "100%"
             :max-height "100%"
             :min-height "100%"
