@@ -15,7 +15,15 @@
                   :height   "100%"
                   :width    "100%"}]
 
-  [:.home-page-link-container {:display :inline-block
+  [:.half-screen {:overflow :hidden
+                  :position :relative
+                  :width "50%"
+                  :left "25%"
+                  :right "25%"
+                  :height "100%"}]
+
+  [:.home-page-link-container {:position :relative
+                               :display :inline-block
                                :height "100%"
                                :width "50%"
                                :text-align :center}]
@@ -25,18 +33,21 @@
                      :transform "translateY(-50%)"
                      :display :block
                      :text-decoration :none
-                     :color :white
+                     :color :#ADADAD
                      :text-align :center
                      :font-size "150%"}]
 
-  [:.home-page-link-image {:display :inline-block
-                           :max-width "90%"
-                           :max-height "90%"}]
+  [:.home-page-link-image {:display :block
+                           :margin-left :auto
+                           :margin-right :auto
+                           :text-align :center
+                           :max-width "50%"
+                           :max-height "50%"}]
 
   [:#sidebar {:position :absolute
               :width "calc(20% - 2px)"
               :height "100%"
-              :border-right "solid 2px white"}]
+              :border-right "solid 2px #ADADAD"}]
 
   [:#sidebar-link-container {:position :relative
                              :top "50%"
@@ -44,7 +55,7 @@
 
   [:.sidebar-link {:display :block
                    :text-decoration :none
-                   :color :white
+                   :color :#ADADAD
                    :text-align :center
                    :font-size "150%"}]
 
@@ -62,7 +73,7 @@
                      :height "20%"
                      :width "100%"
                      :margin-bottom "0"
-                     :border-top "solid 2px white"}]
+                     :border-top "solid 2px #ADADAD"}]
 
   [:.main-photo-container    {:height "80%"}]
   [:.preview-photo-container {:height "20%"}]

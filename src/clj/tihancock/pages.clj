@@ -22,7 +22,7 @@
         title]])]])
 
 (def index
-  (page [:body [:div {:class :full-screen}
+  (page [:body [:div {:class :half-screen}
                 (for [{link :link title :title} links]
                   [:div {:class :home-page-link-container}
                    [:a {:class :home-page-link
