@@ -54,13 +54,13 @@
                       :width "80%"
                       :height "100%"}]
 
-  [:#main-photo {:height "80%"
-                 :width "100%"
-                 :margin-bottom "0"}]
+  [:#main-photos {:height "80%"
+                  :width "100%"
+                  :margin-bottom "0"}]
 
   [:#photo-previews {:display :inline-block
                      :bottom "0"
-                     :height "calc(20% - 2px)"
+                     :height "20%"
                      :width "100%"
                      :margin-bottom "0"
                      :border-top "solid 2px white"}]
@@ -68,8 +68,10 @@
   [:.main-photo-container    {:height "80%"}]
   [:.preview-photo-container {:height "20%"}]
 
-  [:.photo {:max-width "100%"
-            :max-height "100%"
-            :min-height "100%"
-            :margin-left :auto
-            :margin-right :auto}])
+  [:.main-photo {:max-width "100%"
+                 :max-height "100%"
+                 :margin-left :auto
+                 :margin-right :auto}]
+
+  [:.preview-photo {:height "100%"
+                    :width :auto}])

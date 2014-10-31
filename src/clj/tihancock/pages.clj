@@ -35,7 +35,7 @@
   (page [:body [:div {:class :full-screen}
                 sidebar
                 [:div {:id :photo-container}
-                 [:div {:id :main-photo}]
+                 [:div {:id :main-photos}]
                  [:div {:id :photo-previews}]]
                 (include-js "//code.jquery.com/jquery-1.9.0.min.js"
                             "//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.13/slick.min.js"

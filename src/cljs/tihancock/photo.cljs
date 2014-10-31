@@ -15,7 +15,7 @@
       (.slick (clj->js {:arrows         false
                         :variableWidth  true
                         :slidesToScroll 1
-                        :asNavFor       :#main-photo
+                        :asNavFor       :#main-photos
                         :focusOnSelect  true
                         :centerMode     true
                         :centerPadding  "0px"})))
@@ -34,12 +34,12 @@
                  (html [:div {:class (name category)}
                         [:h1 {:class :preview-photo-container}
                          [:img {:src   (str bucket p ".thumb")
-                                    :class :photo}]]]))
-      (.slickAdd ($ :#main-photo)
+                                :class :preview-photo}]]]))
+      (.slickAdd ($ :#main-photos)
                  (html [:div {:class (name category)}
                         [:h1 {:class :main-photo-container}
                          [:img {:data-lazy (str bucket p)
-                                    :class     :photo}]]])))))
+                                :class     :main-photo}]]])))))
 
 (go (let [result (<! (http/get (str bucket "photos.json") {:with-credentials? false}))
           photos (js->clj (:body result))]
