@@ -35,8 +35,8 @@
       (.slickAdd ($ :#photo-previews)
                  (html [:div {:class (name category)}
                         [:h1 {:class :preview-photo-container}
-                         [:img {:src   (str bucket p ".thumb")
-                                :class :preview-photo}]]]))
+                         [:img {:data-lazy (str bucket p ".thumb")
+                                :class     :preview-photo}]]]))
       (.slickAdd ($ :#main-photos)
                  (html [:div {:class (name category)}
                         [:h1 {:class :main-photo-container}
