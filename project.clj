@@ -12,9 +12,11 @@
   :plugins [[lein-garden "0.2.4"]
             [lein-ring "0.8.13"]
             [lein-cljsbuild "1.0.3"]
-            [lein-auto "0.1.1"]]
+            [lein-auto "0.1.1"]
+            [lein-pdo "0.1.1"]]
 
-  :aliases {"build-site" ["run" "-m" "tihancock.core/export"]}
+  :aliases {"build-site" ["run" "-m" "tihancock.core/export"]
+            "dev"        ["pdo" ["auto" "build-site"] ["cljsbuild" "auto"] ["garden" "auto"]]}
 
   :source-paths ["src/clj"]
 
