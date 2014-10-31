@@ -46,4 +46,5 @@
 (go (let [result (<! (http/get (str bucket "photos.json") {:with-credentials? false}))
           photos (js->clj (:body result))]
       (enslicken!)
-      (add-photos! photos)))
+      (add-photos! photos)
+      (.focus ($ :.slick-list))))
