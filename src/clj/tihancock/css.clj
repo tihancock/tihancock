@@ -16,7 +16,6 @@
                   :width    "100%"}]
 
   [:.home-page-link-container {:display :inline-block
-                               :position :relative
                                :height "100%"
                                :width "50%"
                                :text-align :center}]
