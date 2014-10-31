@@ -19,8 +19,10 @@
                         :focusOnSelect  true
                         :centerMode     true
                         :centerPadding  "0px"})))
-  (-> ($ :#main-photo)
-      (.slick (clj->js {:lazyLoad       :ondemand
+  (-> ($ :#main-photos)
+      (.slick (clj->js {:autoplay       true
+                        :autoplaySpeed  "5000"
+                        :lazyLoad       :ondemand
                         :arrows         false
                         :slidesToShow   1
                         :slidesToScroll 1
