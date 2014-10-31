@@ -1,0 +1,9 @@
+/target
+/classes
+/checkouts
+/resources
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+*~
