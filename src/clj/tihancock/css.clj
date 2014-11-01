@@ -67,6 +67,8 @@
   [:.photo {:position :relative
             :max-height "100%"
             :max-width "100%"
+            :top "50%"
+            :transform "translateY(-50%)"
             :margin-left :auto
             :margin-right :auto}]
 
