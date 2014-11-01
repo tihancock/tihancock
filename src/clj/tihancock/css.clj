@@ -64,29 +64,19 @@
                       :width "80%"
                       :height "100%"}]
 
-  [:#main-photos {:height "80%"
-                  :width "100%"
-                  :margin-bottom "0"}]
+  [:.photo {:position :relative
+            :max-height "100%"
+            :max-width "100%"
+            :margin-left :auto
+            :margin-right :auto}]
 
-  [:#photo-previews {:display :inline-block
-                     :bottom "0"
-                     :height "20%"
-                     :width "100%"
-                     :margin-bottom "0"
-                     :border-top "solid 2px #ADADAD"}]
+  [:.slick-list 
+   :.slick-track
+   :.slick-slide {:position :relative
+                  :height "100%"}]
 
-  [:.main-photo-container    {:height "80%"}]
-  [:.preview-photo-container {:height "20%"}]
+  [:.slick-prev {:left "25px ! important"}]
+  [:.slick-next {:right "25px ! important"}]
 
-  [:.main-photo {:position :relative
-                 :max-width "100%"
-                 :max-height "100%"
-                 :top "50%"
-                 :transform "translateY(-50%)"
-                 :margin-left :auto
-                 :margin-right :auto}]
-
-  [:.preview-photo {:height "100%"
-                    :width :auto}]
-
-  [:.slick-list {:height "100%"}])
+  [:.slick-prev:before {:content "u+21E6"}]
+  [:.slick-next:before {:content "u+21E8"}])
