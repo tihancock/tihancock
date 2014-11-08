@@ -32,6 +32,8 @@
             :margin-left :auto
             :margin-right :auto}]
 
+  [:.slick-slide {:background "url(\"/images/ajax-loader.gif\") center center no-repeat"}]
+
   [:.slick-list 
    :.slick-track
    :.slick-slide {:position :relative
