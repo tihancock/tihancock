@@ -1,7 +1,8 @@
 /target
 /classes
 /checkouts
-/resources
+/resources/public/js
+/resources/public/css
 *.jar
 *.class
 /.lein-*
