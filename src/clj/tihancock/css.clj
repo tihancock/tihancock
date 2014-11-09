@@ -16,7 +16,7 @@
                   :height   "100%"
                   :width    "100%"}]
 
-  (at-media {:min-device-width "600px"}
+  (at-media {:min-device-width "800px"}
             [:#photo-container {:position :absolute
                                 :margin-bottom "0"
                                 :top "10%"
@@ -26,7 +26,7 @@
                                 :border "solid 5px"
                                 :border-color :#ADADAD}])
   
-  (at-media {:max-device-width "600px"}
+  (at-media {:max-device-width "799px"}
             [:#photo-container {:position :absolute
                                 :height "100%"
                                 :width "100%"}])
