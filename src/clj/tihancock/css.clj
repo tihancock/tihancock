@@ -1,5 +1,6 @@
 (ns tihancock.css
-  (:require [garden.def :refer [defstyles]]))
+  (:require [garden.def :refer [defstyles]]
+            [garden.stylesheet :refer [at-media]]))
 
 (defstyles style
   [:* {:padding "0"
@@ -15,15 +16,21 @@
                   :height   "100%"
                   :width    "100%"}]
 
-  [:#photo-container {:position :absolute
-                      :margin-bottom "0"
-                      :top "10%"
-                      :bottom "10%"
-                      :left "10%"
-                      :right "10%"
-                      :border "solid 5px"
-                      :border-color :#ADADAD}]
+  (at-media {:min-device-width "600px"}
+            [:#photo-container {:position :absolute
+                                :margin-bottom "0"
+                                :top "10%"
+                                :bottom "10%"
+                                :left "10%"
+                                :right "10%"
+                                :border "solid 5px"
+                                :border-color :#ADADAD}])
   
+  (at-media {:max-device-width "600px"}
+            [:#photo-container {:position :absolute
+                                :height "100%"
+                                :width "100%"}])
+
   [:.photo {:position :relative
             :max-height "100%"
             :max-width "100%"
