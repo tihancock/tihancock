@@ -4,9 +4,8 @@
   (:require [cljs-http.client :as http]
             [cljs.core.async :refer [<!]]
             [jayq.core :refer [$]]
-            [hiccups.runtime :as hiccupsrt]))
-
-(enable-console-print!)
+            [hiccups.runtime :as hiccupsrt]
+            [cljs.reader :refer [read-string]]))
 
 (def bucket "https://tihancock-photos.s3.amazonaws.com/")
 
@@ -22,15 +21,14 @@
 
 
 (defn add-photos! [photos]
-  (doseq [[category photo-list] photos]
-    (doseq [p photo-list]
-      (.slickAdd ($ :#photo-container)
-                 (html [:div {:class (name category)}
-                        [:img {:data-lazy (str bucket p)
-                               :class     :photo}]])))))
+  (doseq [p photos]
+    (.slickAdd ($ :#photo-container)
+               (html [:div
+                      [:img {:data-lazy (str bucket p)
+                             :class     :photo}]]))))
 
 (go (let [result (<! (http/get (str bucket "photos.json") {:with-credentials? false}))
-          photos (js->clj (:body result))]
+          photos (read-string (:body result))]
       (enslicken!)
       (add-photos! photos)
       (.focus ($ :.slick-list))))
