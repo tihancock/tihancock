@@ -20,5 +20,6 @@
   :cljsbuild {:builds [{:source-paths ["src/cljs"]
                         :compiler {:output-to "resources/public/js/photo.js"
                                    :optimizations :advanced
+                                   :pretty-print false
                                    :externs ["externs/jquery-1.9.js"
                                              "externs/slick.js"]}}]})

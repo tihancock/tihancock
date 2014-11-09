@@ -32,7 +32,7 @@
             :margin-left :auto
             :margin-right :auto}]
 
-  [:.slick-slide :.photo-container {:background "url(\"/images/ajax-loader.gif\") center center no-repeat"}]
+  [:.slick-slide :#photo-container {:background "url(\"/images/ajax-loader.gif\") center center no-repeat"}]
 
   [:.slick-list 
    :.slick-track
